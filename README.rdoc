@@ -1,6 +1,8 @@
+= rack-diggbarblocker
+
 A Rack middleware that displays a special page when the DiggBar is used.
 
-Usage:
+= Usage
 
 * Put it somewhere were Ruby can find it (Rubygem coming soon)
 * Add this to your rack config:
@@ -20,3 +22,8 @@ Usage:
 
     # ...
   end
+
+
+== Copyright
+
+Copyright (c) 2009 Markus Prinz. See LICENSE for details.
