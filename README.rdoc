@@ -9,7 +9,7 @@ A Rack middleware that displays a special page when the DiggBar is used.
 
   require 'rack/contrib/digg_bar_blocker'
 
-  use Rack::DiggBarBlocker
+  use Rack::DickBarBlocker
 
 * Or, if you're on Rails, add this to your environment.rb:
 
@@ -18,7 +18,7 @@ A Rack middleware that displays a special page when the DiggBar is used.
   Rails::Initializer.run do |config|
     # ...
 
-    config.middleware.use 'Rack::DiggBarBlocker'
+    config.middleware.use 'Rack::DickBarBlocker'
 
     # ...
   end

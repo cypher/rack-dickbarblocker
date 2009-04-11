@@ -1,6 +1,6 @@
 module Rack
   module Contrib
-    class DiggBarBlocker
+    class DickBarBlocker
       def initialize(app)
         @app = app
       end
