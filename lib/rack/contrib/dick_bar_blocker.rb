@@ -12,7 +12,7 @@ module Rack
       def call(env)
         referrer = env['HTTP_REFERER']
         # Regex courtesy of John Gruber: http://daringfireball.net/2009/04/how_to_block_the_diggbar
-        if referrer && referrer =~ %r{http://digg.com/\w{1,8}/*(\?.*)?$}
+        if referrer && referrer =~ %r{http://(?:www\.)?digg.com/\w{1,8}/*(\?.*)?$}
           if @block
             body = @block.call.to_s
           else
