@@ -21,8 +21,8 @@ context "Rack::Contrib::DickBarBlocker" do
 
       status.should.equal 200
       headers['Content-Type'].should.equal 'text/html'
-      body.should =~ %r{<title>Say no to the DiggBar</title>}
-      body.should =~ %r{Dear Digg.*Framing Sites is bullshit\.}m
+      body.should =~ %r{<title>Say no to the DiggBar</title>}i
+      body.should =~ %r{Dear Digg.*Framing Sites is bullshit\.}mi
     end
   end
 end
