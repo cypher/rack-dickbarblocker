@@ -1,8 +1,11 @@
 module Rack
   module Contrib
     class DickBarBlocker
-      def initialize(app, &block)
+      def initialize(app, name = nil,  &block)
+        raise ArgumentError, "You need to supply a name or a block" if name.nil? and block.nil?
+
         @app = app
+        @name = name
         @block = block
       end
 
@@ -41,7 +44,7 @@ module Rack
             Framing sites is bullshit.<br>
             <br>
             Your pal,<br>
-            —J.G.
+            —#{@name}
         </p>
         <p>
             p.s. Firefox users may enjoy the<br>
