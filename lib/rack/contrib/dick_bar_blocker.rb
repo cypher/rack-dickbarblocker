@@ -20,6 +20,8 @@ module Rack
           font-family: "Lucida Grande";
           font-size: 12px;
           line-height: 1.8em;
+          /* So it doesn't stick to the top of the page */
+          margin-top: 12em;
       }
       /* I am no CSS master, but this seems to center the text on the page */
       p {
