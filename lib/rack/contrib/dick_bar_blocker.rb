@@ -1,15 +1,19 @@
 module Rack
   module Contrib
     class DickBarBlocker
-      def initialize(app)
+      def initialize(app, &block)
         @app = app
+        @block = block
       end
 
       def call(env)
         referrer = env['HTTP_REFERER']
         # Regex courtesy of John Gruber: http://daringfireball.net/2009/04/how_to_block_the_diggbar
         if referrer && referrer =~ %r{http://digg.com/\w{1,8}/*(\?.*)?$}
-          body = <<BODY
+          if @block
+            body = @block.call.to_s
+          else
+            body = <<BODY
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
     <head>
@@ -50,6 +54,7 @@ module Rack
     </body>
 </html>
 BODY
+          end
 
           [200, {'Content-Length' => body.size.to_s, 'Content-Type' => 'text/html'}, body]
         else
