@@ -18,7 +18,7 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
 
         require 'rack/contrib/dick_bar_blocker'
         
-        use Rack::Contrib::DickBarBlocker
+        use Rack::Contrib::DickBarBlocker, 'name or initials here'
 
 * Or, if you're on Rails, add this to your environment.rb:
 
@@ -26,7 +26,7 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
         
         Rails::Initializer.run do |config|
           config.gem 'cypher-rack-dickbarblocker', :lib => 'rack/contrib/dick_bar_blocker', :source => 'http://gems.github.com'
-          config.middleware.use 'Rack::Contrib::DickBarBlocker'
+          config.middleware.use 'Rack::Contrib::DickBarBlocker', 'name or initials here'
           
           # rest of your config
         end
@@ -37,7 +37,7 @@ By default, it shows the following text (sans markup):
 > Framing sites is bullshit.
 >
 > Your pal,  
-> —J.G.
+> —(here are the supplied initals or name)
 >
 > p.s. Firefox users may enjoy the  
 > DiggBar Killer script for Greasemonkey.
