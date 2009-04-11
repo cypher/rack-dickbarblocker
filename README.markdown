@@ -6,7 +6,14 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
 
 # Usage
 
-* Put it somewhere were Ruby can find it (Rubygem coming soon)
+* Install it via Rubygems:
+
+        # Add http://gems.github.com to your gem sources.
+        # (You only need to do this once)
+        gem sources -a http://gems.github.com
+        # Install the gem
+        sudo gem install cypher-rack-dickbarblocker
+
 * Add this to your rack config:
 
         require 'rack/contrib/dick_bar_blocker'
@@ -18,8 +25,9 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
         require 'rack/contrib/dick_bar_blocker'
         
         Rails::Initializer.run do |config|
+          config.gem 'cypher-rack-dickbarblocker', :lib => 'rack/contrib/dick_bar_blocker', :source => 'http://gems.github.com'
           config.middleware.use 'Rack::Contrib::DickBarBlocker'
-        
+          
           # rest of your config
         end
 
