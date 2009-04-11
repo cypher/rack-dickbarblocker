@@ -33,16 +33,16 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
 
 By default, it shows the following text (sans markup):
 
-> Dear Digg,
+> Dear Digg,  
 > Framing sites is bullshit.
 >
-> Your pal,
+> Your pal,  
 > —J.G.
 >
-> p.s. Firefox users may enjoy the<br>
+> p.s. Firefox users may enjoy the  
 > DiggBar Killer script for Greasemonkey.
 >
-> p.p.s. Digg users can disable the DiggBar under
+> p.p.s. Digg users can disable the DiggBar under  
 > My Profile → Settings → Viewing Preferences.
 
 You can override this by supplying the middleware with a block that returns whatever you want it to display:
