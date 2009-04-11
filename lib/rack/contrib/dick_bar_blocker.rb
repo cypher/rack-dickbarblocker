@@ -14,7 +14,7 @@ module Rack
 <html lang="en">
     <head>
       <meta charset="UTF-8" />
-      <title>Say no to the DiggBar</title>
+      <title>Don't be a dick, say no to the DiggBar</title>
       <style type="text/css">
       body {
           font-family: "Lucida Grande";
