@@ -31,6 +31,37 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
           # rest of your config
         end
 
+By default, it shows the following text (sans markup):
+
+> Dear Digg,
+> Framing sites is bullshit.
+>
+> Your pal,
+> —J.G.
+>
+> p.s. Firefox users may enjoy the<br>
+> DiggBar Killer script for Greasemonkey.
+>
+> p.p.s. Digg users can disable the DiggBar under
+> My Profile → Settings → Viewing Preferences.
+
+You can override this by supplying the middleware with a block that returns whatever you want it to display:
+
+    use Rack::Contrib::DickBarBlocker do
+      <<-HTML
+      <html>
+        <body>
+          Kittens are fun!
+        </body>
+      </html>
+      HTML
+    end
+
+This would return an HTML page with "Kittens are fun!" on it instead.
+
+DickBarBlocker expects the return value of the body to respond to `to_s`.
+It also currently hardcodes the content type to `text/html`, so your response should
+be HTML.
 
 ## Copyright
 
