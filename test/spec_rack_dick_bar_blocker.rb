@@ -22,7 +22,7 @@ context "Rack::Contrib::DickBarBlocker" do
       status.should.equal 200
       headers['Content-Type'].should.equal 'text/html'
       body.should =~ %r{<title>Don't be a dick, say no to the DiggBar</title>}i
-      body.should =~ %r{Dear Digg,.*Framing sites is bullshit\.}mi
+      body.should =~ %r{Dear Digg,<br>\s+Framing sites is bullshit\.<br>\s+<br>\s+Your pal,<br>\s+—J.G.}mi
     end
 
     specify "returns custom content when supplied with a block" do
