@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.date = %q{2009-04-11}
   s.email = %q{markus.prinz@nuclearsquid.com}
   s.extra_rdoc_files = [
-    "README.rdoc"
+    "README.markdown"
   ]
   s.files = [
-    "README.rdoc",
+    "README.markdown",
     "Rakefile",
     "VERSION.yml",
     "lib/rack/contrib/dick_bar_blocker.rb",
