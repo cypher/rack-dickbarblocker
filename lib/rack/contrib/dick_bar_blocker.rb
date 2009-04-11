@@ -13,7 +13,7 @@ module Rack
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
     <head>
-      <meta charset="UTF-8" />
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
       <title>Don't be a dick, say no to the DiggBar</title>
       <style type="text/css">
       body {
