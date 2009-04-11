@@ -11,14 +11,14 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
 
         require 'rack/contrib/dick_bar_blocker'
         
-        use Rack::DickBarBlocker
+        use Rack::Contrib::DickBarBlocker
 
 * Or, if you're on Rails, add this to your environment.rb:
 
         require 'rack/contrib/dick_bar_blocker'
         
         Rails::Initializer.run do |config|
-          config.middleware.use 'Rack::DickBarBlocker'
+          config.middleware.use 'Rack::Contrib::DickBarBlocker'
         
           # rest of your config
         end
