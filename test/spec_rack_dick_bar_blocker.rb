@@ -24,5 +24,14 @@ context "Rack::Contrib::DickBarBlocker" do
       body.should =~ %r{<title>Don't be a dick, say no to the DiggBar</title>}i
       body.should =~ %r{Dear Digg,.*Framing sites is bullshit\.}mi
     end
+
+    specify "returns custom content when supplied with a block" do
+      block = lambda { "Here be kittens." }
+      status, headers, body = Rack::Contrib::DickBarBlocker.new(app, &block).call({'HTTP_REFERER' => 'http://digg.com/d1oNOZ'})
+
+      status.should.equal 200
+      headers['Content-Type'].should.equal 'text/html'
+      body.should.equal "Here be kittens."
+    end
   end
 end
