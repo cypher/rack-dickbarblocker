@@ -1,6 +1,6 @@
 module Rack
   module Contrib
-    class NoDouchebaggery
+    class DiggBarBlocker
       def initialize(app)
         @app = app
       end
