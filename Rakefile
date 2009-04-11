@@ -4,10 +4,10 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "rack-diggbarblocker"
+    gem.name = "rack-dickbarblocker"
     gem.summary = %Q{Shows a special page to anyone using the DiggBar}
     gem.email = "markus.prinz@nuclearsquid.com"
-    gem.homepage = "http://github.com/cypher/rack-diggbarblocker"
+    gem.homepage = "http://github.com/cypher/rack-dickbarblocker"
     gem.authors = ["Markus Prinz"]
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -48,7 +48,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "rack-diggbarblocker #{version}"
+  rdoc.title = "rack-dickbarblocker #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
