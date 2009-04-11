@@ -1,6 +1,6 @@
 # rack-dickbarblocker
 
-A Rack middleware that displays a special page when the DiggBar is used.
+A Rack middleware that displays a special page to anyone using the DiggBar.
 
 Hat-tip to [rue](http://github.com/rue) for suggesting the name.
 
@@ -31,7 +31,7 @@ Hat-tip to [rue](http://github.com/rue) for suggesting the name.
           # rest of your config
         end
 
-By default, it shows the following text (sans markup):
+By default, it shows the following text, taken from John Grubers page (sans markup):
 
 > Dear Digg,  
 > Framing sites is bullshit.
@@ -59,9 +59,8 @@ You can override this by supplying the middleware with a block that returns what
 
 This would return an HTML page with "Kittens are fun!" on it instead.
 
-DickBarBlocker expects the return value of the body to respond to `to_s`.
-It also currently hardcodes the content type to `text/html`, so your response should
-be HTML.
+DickBarBlocker expects the return value of the block to respond to `to_s`.
+It also currently hardcodes the content type to `text/html`, so your return value should also be (or generate) HTML.
 
 ## Copyright
 
