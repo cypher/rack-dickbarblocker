@@ -15,6 +15,19 @@ module Rack
     <head>
       <meta charset="UTF-8" />
       <title>Say no to the DiggBar</title>
+      <style type="text/css">
+      body {
+          font-family: "Lucida Grande";
+          font-size: 12px;
+          line-height: 1.8em;
+      }
+      /* I am no CSS master, but this seems to center the text on the page */
+      p {
+          margin-left: auto;
+          margin-right: auto;
+          width: 32em;
+      }
+      </style>
     </head>
     <body>
         <p>
