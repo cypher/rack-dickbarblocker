@@ -26,4 +26,4 @@ A Rack middleware that displays a special page when the DiggBar is used.
 
 == Copyright
 
-Copyright (c) 2009 Markus Prinz. See LICENSE for details.
+Copyright (c) 2009 Markus Prinz. See COPYING for details.
