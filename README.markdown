@@ -37,7 +37,7 @@ By default, it shows the following text, taken from John Grubers page (sans mark
 > Framing sites is bullshit.
 >
 > Your pal,  
-> —(here are the supplied initals or name)
+> —(here are the supplied initials or name)
 >
 > p.s. Firefox users may enjoy the  
 > DiggBar Killer script for Greasemonkey.
